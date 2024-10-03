@@ -1,8 +1,7 @@
 package lotr;
 
-
 public class GameManager {
-    void fight(Character chr1, Character chr2) {
+    public void fight(Character chr1, Character chr2) {
         System.out.println(chr1 + " is fighting " + chr2);
         while (chr1.isAlive() && chr2.isAlive()) {
             if (!checkMove(chr1, chr2)) {
@@ -14,7 +13,7 @@ public class GameManager {
         }
     }
 
-    Boolean checkMove(Character chr1, Character chr2) {
+    private Boolean checkMove(Character chr1, Character chr2) {
         System.out.println(chr1 + " kicked " + chr2);
         chr1.kick(chr2);
         System.out.println(chr1 + " dealt " + chr1 + " damage to"  + chr2);
